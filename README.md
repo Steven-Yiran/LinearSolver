@@ -3,7 +3,7 @@
 Steven Shi, Jack Klawitter
 
 ## 1. Poisson Equation
-In this project, we implemented a  numerical solver for the Poisson Equation in two-dimensions. Our method extend the 1D finite difference method into 2D by modifying coefficients in our sparse matrix to account for the added dimension.
+In this project, we implemented a numerical solver for the Poisson Equation in two-dimensions. The program implements a 2D finite difference method on any 2D plane constructed by triangle meshes. The mesh framework we used is called flux, developed by Dr. Philip Caplan.
 
 Poisson's Equation is $ \nabla^{2} u = f(x, y)$. We use the finite differences method to approximate our partial derivatives as $$\frac{\partial^{2}u}{\partial x^2} = \frac{u_{i+1,j}- 2u_{i,j}+u_{i-1,j}}{h^2}$$ and $$ \frac{\partial^{2}u}{\partial y^2} = \frac{u_{i,j+1} - 2u_{i,j} + u_{i, j-1}}{h^2}$$ With the sum of these two giving us our final approximation for each point as $$ f_{i, j} = \frac{u_{i+1,j}- 4u_{i,j}+u_{i-1,j} + u_{i,j+1} + u_{i, j-1}}{h^2}$$
 
