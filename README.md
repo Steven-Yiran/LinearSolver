@@ -1,6 +1,6 @@
-# Final Project Report
+# Linear Solver for Possion's Equation
 
-**Names: Jack Klawitter and Steven Shi**
+Steven Shi, Jack Klawitter
 
 ## 1. Poisson Equation
 In this project, we implemented a  numerical solver for the Poisson Equation in two-dimensions. Our method followed quite similarly to the 1D solution that we did together in class. The main change that had to be made was adjusting the coefficients in our sparse matrix to account for the additional dimension.
