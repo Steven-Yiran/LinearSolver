@@ -8,7 +8,10 @@ In this project, we implemented a  numerical solver for the Poisson Equation in 
 Poisson's Equation is $ \nabla^{2} u = f(x, y)$. We use the finite differences method to approximate our partial derivatives as $$\frac{\partial^{2}u}{\partial x^2} = \frac{u_{i+1,j}- 2u_{i,j}+u_{i-1,j}}{h^2}$$ and $$ \frac{\partial^{2}u}{\partial y^2} = \frac{u_{i,j+1} - 2u_{i,j} + u_{i, j-1}}{h^2}$$ With the sum of these two giving us our final approximation for each point as $$ f_{i, j} = \frac{u_{i+1,j}- 4u_{i,j}+u_{i-1,j} + u_{i,j+1} + u_{i, j-1}}{h^2}$$
 
 We can then express our problem as the system of equations
-![](./images/matrix(1).jpg)
+<p align="center">
+  <img src="./images/matrix(1).jpg" />
+</p>
+
 
 We solved this equation using both Solve_NL and Philip's implementation of the Jacobi method. 
 
@@ -31,12 +34,16 @@ $$f(x,y) = 2$$
 
 The trig boundary conditions returned the following result when visualized using the vertex field in webgl:
 
-![](./images/trig.png)
+<p align="center">
+  <img src="./images/trig.png" />
+</p>
 
 
 and the other returned:
 
-![](./images/notTrig.png)
+<p align="center">
+  <img src="./images/notTrig.png" />
+</p>
 
 For both sets of boundary conditions, we calculated the error in our solution when compared to the analytic solution and the runtime for our algorithm for grids of different sizes. Interestingly, our error did not increase with a larger grid. In the case of the non-trig boundary conditions, it actually increased. This is what we anticipated since our derivative approximations would be better. We weren't able to figure out why this was. We do see the anticipated increase in runtime.
 
@@ -57,7 +64,6 @@ To discretize the convection-diffusion equation, we again applied the Finite-Dif
 
 The application of this was very similar to above, and just required a slight alteration of the values in our sparse matrix to account for the additional derivatives that were being taken. For the same trigonometric boundary conditions as above, we determined the visual result of:
 
-![](./images/trigConvec.png)
 <p align="center">
   <img src="./images/trigConvec.png" />
 </p>
