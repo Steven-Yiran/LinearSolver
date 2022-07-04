@@ -58,6 +58,10 @@ To discretize the convection-diffusion equation, we again applied the Finite-Dif
 The application of this was very similar to above, and just required a slight alteration of the values in our sparse matrix to account for the additional derivatives that were being taken. For the same trigonometric boundary conditions as above, we determined the visual result of:
 
 ![](./images/trigConvec.png)
+<p align="center">
+  <img src="./images/trigConvec.png" />
+</p>
+
 
 
 We similarly calculated the error and runtime for grids of various sizes. These results are shown below.
