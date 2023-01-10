@@ -1,6 +1,8 @@
 # Linear Solver for Possion's Equation
 
-Steven Shi, Jack Klawitter
+## Requirement
+Flux: Mesh Rendering Software.
+C++
 
 ## 1. Poisson Equation
 In this project, we implemented a numerical solver for the Poisson Equation in two-dimensions. The program implements a 2D finite difference method on any 2D plane constructed by triangle meshes. The mesh framework we used is called flux, developed by Dr. Philip Caplan.
@@ -79,7 +81,7 @@ We similarly calculated the error and runtime for grids of various sizes. These 
 
 Our error was very similar to solving Poisson's equation, but our run time was actually faster when solving the convection-diffusion equation.
 
-
+Developed by Steven Shi and Jack Klawitter.
 
 
 ## Reference
